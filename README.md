@@ -8,6 +8,13 @@ Este script lee un archivo CSV, manipula los datos y escribe los datos manipulad
 * Agregar un archivo CSV de entrada con nombre "export_men.csv" en la carpeta raíz del proyecto.
 * Ejecutar el script con node index.js.
 * Revisar el archivo CSV de salida con nombre "output.csv" en la carpeta raíz del proyecto.
+
+## Instalacion
+Para instalar este proyecto, seguir los siguientes pasos:
+
+1.Clonar el repositorio
+2.Ejecutar npm install para instalar las dependencias
+
 ## Funcionalidades
 Lee un archivo CSV con el paquete csv-parser.
 Asigna los nombres de columna correctos a las columnas de entrada del archivo CSV con la opción mapHeaders.
