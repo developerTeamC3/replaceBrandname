@@ -12,8 +12,8 @@ Este script lee un archivo CSV, manipula los datos y escribe los datos manipulad
 ## Instalacion
 Para instalar este proyecto, seguir los siguientes pasos:
 
-1.Clonar el repositorio
-2.Ejecutar npm install para instalar las dependencias
+* Clonar el repositorio
+* Ejecutar npm install para instalar las dependencias
 
 ## Funcionalidades
 Lee un archivo CSV con el paquete csv-parser.
