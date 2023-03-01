@@ -1,16 +1,24 @@
 # replaceBrandname
-Descripción
-Este script en Node.js permite leer un archivo CSV, manipular los datos y escribir los datos manipulados en otro archivo CSV. Además, incluye la funcionalidad de marcar el tiempo de procesamiento y validar la cantidad de campos por fila.
+Manipulación de datos de archivo CSV con Node.js
+Este script lee un archivo CSV, manipula los datos y escribe los datos manipulados en otro archivo CSV.
 
-Instalación
-Antes de usar este script, es necesario tener instalado Node.js en su computadora y luego instalar las dependencias necesarias que se especifican en el archivo package.json. Para instalar las dependencias, simplemente ejecute el siguiente comando en la línea de comandos:
-npm install
 Uso
-Para usar este script, simplemente debe proporcionar los nombres de archivo de entrada y salida en las variables inputFile y outputFile, respectivamente. 
-Luego, ejecute el script en la línea de comandos con el siguiente comando:
-node script.js
-El script leerá el archivo de entrada, manipulará los datos y escribirá los datos manipulados en el archivo de salida. También mostrará en la consola la cantidad de tiempo que tardó el proceso y una advertencia en caso de que una fila tenga más de 4 campos.
-Información adicional
-Este script también incluye comentarios en el código para explicar su funcionalidad en detalle. Además, al finalizar el proceso, el archivo de salida incluirá las cabeceras de las columnas, seguidas de los datos manipulados. Si alguna fila contiene más de 4 campos, se detendrá el proceso y se mostrará un mensaje de error en la consola.
+Clonar el repositorio en tu equipo local.
+Instalar las dependencias con npm install.
+Agregar un archivo CSV de entrada con nombre "export_men.csv" en la carpeta raíz del proyecto.
+Ejecutar el script con node index.js.
+Revisar el archivo CSV de salida con nombre "output.csv" en la carpeta raíz del proyecto.
+Funcionalidades
+Lee un archivo CSV con el paquete csv-parser.
+Asigna los nombres de columna correctos a las columnas de entrada del archivo CSV con la opción mapHeaders.
+Verifica que cada fila tenga 4 campos y muestra una advertencia en la consola si no los tiene.
+Manipula los datos de acuerdo a las necesidades del proyecto.
+Escribe los datos manipulados en el archivo de salida CSV con el paquete fs.
+Agrega las cabeceras de las columnas en el archivo de salida CSV.
+Muestra en consola el tiempo que tarda el script en procesar los datos.
+Advertencias
+Este script está diseñado para leer y escribir archivos CSV con un formato y estructura específicos. Si el archivo CSV de entrada tiene una estructura diferente, es posible que el script no funcione correctamente.
+El script está diseñado para leer y escribir archivos CSV con una codificación de caracteres específica. Si el archivo CSV de entrada tiene una codificación de caracteres diferente, es posible que el script no funcione correctamente.
 
-Este script es útil para manipular grandes cantidades de datos en formato CSV de manera automatizada, lo que puede ahorrar tiempo y reducir errores en el proceso de manipulación de datos.
+
+Regenerate response
