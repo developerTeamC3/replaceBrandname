@@ -9,6 +9,7 @@ const csv = require('csv-parser');
 
 const inputFile = 'export_men.csv';
 const outputFile = 'output.csv';
+const logFile = 'log.txt'; // agrega el archivo de log
 const startTime = new Date();// Toma una marca de tiempo al comienzo del procesamiento
 let stream = null; // Declarar la variable fuera de los eventos y asignarle el valor nulo
 let hasError = false; // bandera para indicar si se ha encontrado una fila con más de 4 campos
@@ -45,7 +46,16 @@ fs.createReadStream(inputFile)
     }
     // Manipula los datos
     const valueToWrite = row['c__brandName']; // Obtiene el valor de la columna 1
-    row['brand'] = valueToWrite; // Escribe el valor en la columna 2
+    if (row['brand']) {
+      //console.log(`El campo 'brand' ya tiene un valor: ${row['_0']},${row['brand']}`);
+      fs.appendFileSync(logFile, `El campo 'brand' ya tiene un valor: ${row['_0']},${row['brand']}\n`); // Agrega el registro al archivo de log
+  } else {
+      row['brand'] = valueToWrite; // Escribe el valor en la columna 2
+  }
+    if (valueToWrite == '') {
+      //console.log(`El valor nulo de 'c__brandName' se encuentra en la fila ${row['_0']}`);
+      fs.appendFileSync(logFile, `El valor nulo de 'c__brandName' se encuentra en la fila ${row['_0']}\n`); // Agrega el registro al archivo de log
+  }
      //console.log(row);
   })
   .on('end', () => {
